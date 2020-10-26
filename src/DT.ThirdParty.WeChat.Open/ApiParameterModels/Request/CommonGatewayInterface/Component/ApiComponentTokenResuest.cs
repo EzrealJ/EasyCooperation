@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Text;
+using EasyCooperation.Abstraction.ApiParameterModels.Request;
 using WebApiClient.DataAnnotations;
 
 namespace EasyCooperation.WeChat.Open.ApiParameterModels.Request.CommonGatewayInterface.Component
@@ -8,7 +9,7 @@ namespace EasyCooperation.WeChat.Open.ApiParameterModels.Request.CommonGatewayIn
     /// <summary>
     /// <seealso href="https://developers.weixin.qq.com/doc/oplatform/Third-party_Platforms/api/component_access_token.html"/>
     /// </summary>
-    public class ApiComponentTokenRequest
+    public class ApiComponentTokenRequest:IRequestModel
     {
         /// <summary>
         /// 第三方平台 appid

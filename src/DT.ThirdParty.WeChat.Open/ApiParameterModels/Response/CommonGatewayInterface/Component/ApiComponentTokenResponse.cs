@@ -16,7 +16,7 @@ namespace EasyCooperation.WeChat.Open.ApiParameterModels.Response.CommonGatewayI
         [AliasAs("component_access_token")]
         public string ComponentAccessToken { get; set; }
         /// <summary>
-        /// 第三方平台 appsecret
+        /// 有效期，单位：秒
         /// </summary>
         [AliasAs("expires_in")]
         public uint ExpiresIn { get; set; }

@@ -1,12 +1,14 @@
 ﻿using System;
 using EasyCooperation.WeChat.Open.HttpInterface.CommonGatewayInterface;
 using WebApiClient;
+// ReSharper disable SuggestVarOrType_SimpleTypes
 
 namespace SimpleTestConsole
 {
-    class Program
+    // ReSharper disable once ClassNeverInstantiated.Global
+    public class Program
     {
-        static async System.Threading.Tasks.Task Main(string[] args)
+        public static async System.Threading.Tasks.Task Main(string[] args)
         {
             HttpApi.Register<IComponent>();
             var component = HttpApi.Resolve<IComponent>();

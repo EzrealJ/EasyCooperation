@@ -6,6 +6,7 @@ using WebApiClient.Attributes;
 
 namespace EasyCooperation.Abstraction.HttpInterface
 {
+
     [TraceFilter(OutputTarget = OutputTarget.Console)]
     public interface IHttpInterface : IHttpApi
     {
