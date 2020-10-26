@@ -1,0 +1,21 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netstandard2.0</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Folder Include="ApiParameterModels\Generic\" />
+    <Folder Include="ApiParameterModels\Request\" />
+    <Folder Include="ApiParameterModels\Response\" />
+    <Folder Include="Attributes\" />
+    <Folder Include="Enums\" />
+    <Folder Include="Filter\" />
+    <Folder Include="Sign\" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="WebApiClient.JIT" Version="1.1.4" />
+  </ItemGroup>
+
+</Project>
