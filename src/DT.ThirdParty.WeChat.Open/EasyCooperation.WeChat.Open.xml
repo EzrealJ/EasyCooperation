@@ -24,6 +24,16 @@
             微信后台推送的 ticket
             </summary>
         </member>
+        <member name="P:EasyCooperation.WeChat.Open.ApiParameterModels.Request.CommonGatewayInterface.Component.ApiCreatePreAuthCodeRequest.ComponentAccessToken">
+            <summary>
+            第三方平台component_access_token，不是authorizer_access_token
+            </summary>
+        </member>
+        <member name="P:EasyCooperation.WeChat.Open.ApiParameterModels.Request.CommonGatewayInterface.Component.ApiCreatePreAuthCodeRequest.ComponentAppId">
+            <summary>
+            第三方平台 appid
+            </summary>
+        </member>
         <member name="T:EasyCooperation.WeChat.Open.ApiParameterModels.Response.CommonGatewayInterface.Component.ApiComponentTokenResponse">
             <summary>
             <seealso href="https://developers.weixin.qq.com/doc/oplatform/Third-party_Platforms/api/component_access_token.html"/>
@@ -36,7 +46,17 @@
         </member>
         <member name="P:EasyCooperation.WeChat.Open.ApiParameterModels.Response.CommonGatewayInterface.Component.ApiComponentTokenResponse.ExpiresIn">
             <summary>
-            第三方平台 appsecret
+            有效期，单位：秒
+            </summary>
+        </member>
+        <member name="P:EasyCooperation.WeChat.Open.ApiParameterModels.Response.CommonGatewayInterface.Component.ApiCreatePreAuthCodeResponse.PreAuthCode">
+            <summary>
+            预授权码
+            </summary>
+        </member>
+        <member name="P:EasyCooperation.WeChat.Open.ApiParameterModels.Response.CommonGatewayInterface.Component.ApiCreatePreAuthCodeResponse.ExpiresIn">
+            <summary>
+            有效期，单位：秒
             </summary>
         </member>
         <member name="T:EasyCooperation.WeChat.Open.ApiParameterModels.Response.WeChatJsonResponse">
@@ -9239,7 +9259,7 @@
             Component
             </summary>
         </member>
-        <member name="M:EasyCooperation.WeChat.Open.HttpInterface.CommonGatewayInterface.IComponent.ApiComponentToken(EasyCooperation.WeChat.Open.ApiParameterModels.Request.CommonGatewayInterface.Component.ApiComponentTokenRequest)">
+        <member name="M:EasyCooperation.WeChat.Open.HttpInterface.CommonGatewayInterface.IComponent.ApiComponentToken(EasyCooperation.WeChat.Open.ApiParameterModels.Request.CommonGatewayInterface.Component.ApiComponentTokenRequest,System.Nullable{System.TimeSpan},System.Threading.CancellationToken)">
              <summary>
              令牌
              <seealso href="https://developers.weixin.qq.com/doc/oplatform/Third-party_Platforms/api/component_access_token.html"/>
@@ -9251,6 +9271,8 @@
              </para>
              </summary>
              <param name="apiComponentTokenRequest"></param>
+             <param name="timeout"></param>
+             <param name="cancellationToken"></param>
              <returns></returns>
         </member>
     </members>

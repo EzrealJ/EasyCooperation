@@ -13,10 +13,8 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <Folder Include="ApiClient\" />
-    <Folder Include="ApiParameterModels\Generic\" />
-    <Folder Include="Filter\" />
-    <Folder Include="Sign\" />
+    <Folder Include="ApiClients\" />
+    <Folder Include="Filters\" />
   </ItemGroup>
 
   <ItemGroup>
