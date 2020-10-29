@@ -7,7 +7,7 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "src", "src", "{06C10BA9-7C0
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "test", "test", "{441C35B0-0F4C-4080-A0F9-CE76BF27C5B6}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "EasyCooperation.WeChat.ThirdPartyPlatforms", "src\DT.ThirdParty.WeChat.Open\EasyCooperation.WeChat.ThirdPartyPlatforms.csproj", "{44633E28-6827-40D2-B105-C76848EE2187}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "EasyCooperation.WeChat.ThirdPartyPlatforms", "src\DT.ThirdParty.WeChat.ThirdPartyPlatforms\EasyCooperation.WeChat.ThirdPartyPlatforms.csproj", "{44633E28-6827-40D2-B105-C76848EE2187}"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "EasyCooperation.Abstraction", "src\DT.ThirdParty.Abstraction\EasyCooperation.Abstraction.csproj", "{C0913446-4AA0-47D1-8047-37EA3F7EA567}"
 EndProject
@@ -20,7 +20,7 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SimpleTestConsole", "test\S
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "NotifyWebTest", "test\NotifyWebTest\NotifyWebTest.csproj", "{5233C807-C65C-4BDD-BC4E-0BF4CA2BB2D4}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EasyCooperation.WeChat.OfficialAccount", "src\EasyCooperation.WeChat.MediaPlatform\EasyCooperation.WeChat.OfficialAccount.csproj", "{57E4D60B-51BD-4620-BCC6-8AF87E7F1449}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EasyCooperation.WeChat.OfficialAccount", "src\EasyCooperation.WeChat.OfficialAccount\EasyCooperation.WeChat.OfficialAccount.csproj", "{57E4D60B-51BD-4620-BCC6-8AF87E7F1449}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EasyCooperation.WeChat.Common", "src\EasyCooperation.WeChat.Common\EasyCooperation.WeChat.Common.csproj", "{264F60F8-7EE6-4391-B23A-3241E2F41324}"
 EndProject

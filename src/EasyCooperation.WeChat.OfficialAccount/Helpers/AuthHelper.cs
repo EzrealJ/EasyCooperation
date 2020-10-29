@@ -8,7 +8,7 @@ namespace EasyCooperation.WeChat.OfficialAccount.Helpers
 {
     public static class AuthHelper
     {
-        public static string GetAuthorizeUrl(string appId, string redirectUrl, string state, EnumOAuthScope scope, string responseType = "code", string componentAppId = "", bool addConnectRedirect = true)
+        public static string GetAuthorizeUrl(string appId, string redirectUrl, string state, EnumOAuthScope scope, string responseType = "code", string componentAppId = "")
         {
             StringBuilder redirectUrlBuilder = new StringBuilder("https://");
             redirectUrlBuilder.Append($"open.weixin.qq.com/connect/oauth2/authorize?appid={appId}&redirect_uri={redirectUrl}&response_type={responseType}&scope={scope}&state={state}&connect_redirect=1");

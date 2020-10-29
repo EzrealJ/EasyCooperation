@@ -10,7 +10,8 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\..\src\DT.ThirdParty.WeChat.Open\EasyCooperation.WeChat.ThirdPartyPlatforms.csproj" />
+    <ProjectReference Include="..\..\src\DT.ThirdParty.WeChat.ThirdPartyPlatforms\EasyCooperation.WeChat.ThirdPartyPlatforms.csproj" />
+    <ProjectReference Include="..\..\src\EasyCooperation.WeChat.OfficialAccount\EasyCooperation.WeChat.OfficialAccount.csproj" />
   </ItemGroup>
 
 

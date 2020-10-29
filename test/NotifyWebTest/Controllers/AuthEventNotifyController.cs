@@ -13,7 +13,7 @@ namespace NotifyWebTest.Controllers
         private readonly ILogger<AuthEventNotifyController> _logger;
         private readonly IMemoryCache _memoryCache;
 
-        public AuthEventNotifyController(ComponentAuthEventPublisher componentAuthEventPublisher,ILogger<AuthEventNotifyController> logger, IMemoryCache memoryCache)
+        public AuthEventNotifyController(ComponentAuthEventPublisher componentAuthEventPublisher, ILogger<AuthEventNotifyController> logger, IMemoryCache memoryCache)
         {
             _componentAuthEventPublisher = componentAuthEventPublisher;
             _logger = logger;
@@ -25,7 +25,7 @@ namespace NotifyWebTest.Controllers
             [FromQuery] string msg_signature,
             [FromQuery] string timestamp,
             [FromQuery] string nonce,
-            [FromBody]ComponentNotifyModel componentNotifyModel)
+            [FromBody] ComponentNotifyModel componentNotifyModel)
         {
             _logger.LogInformation($"{nameof(msg_signature)} is {msg_signature}");
             _logger.LogInformation($"{nameof(timestamp)} is {timestamp}");
