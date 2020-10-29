@@ -1,0 +1,471 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>EasyCooperation.WeChat.ThirdPartyPlatforms</name>
+    </assembly>
+    <members>
+        <member name="T:EasyCooperation.WeChat.ThirdPartyPlatforms.ApiModels.Request.CommonGatewayInterface.Component.ApiAuthorizerTokenRequest">
+            <summary>
+            第三方获取授权方令牌的请求模型
+            </summary>
+        </member>
+        <member name="P:EasyCooperation.WeChat.ThirdPartyPlatforms.ApiModels.Request.CommonGatewayInterface.Component.ApiAuthorizerTokenRequest.ComponentAppId">
+            <summary>
+            第三方平台 appid
+            </summary>
+        </member>
+        <member name="P:EasyCooperation.WeChat.ThirdPartyPlatforms.ApiModels.Request.CommonGatewayInterface.Component.ApiAuthorizerTokenRequest.AuthorizerAppId">
+            <summary>
+            授权方 appid
+            </summary>
+        </member>
+        <member name="P:EasyCooperation.WeChat.ThirdPartyPlatforms.ApiModels.Request.CommonGatewayInterface.Component.ApiAuthorizerTokenRequest.AuthorizerRefreshToken">
+            <summary>
+            刷新令牌，获取/刷新授权信息时得到
+            </summary>
+        </member>
+        <member name="T:EasyCooperation.WeChat.ThirdPartyPlatforms.ApiModels.Request.CommonGatewayInterface.Component.ApiComponentTokenRequest">
+            <summary>
+            <seealso href="https://developers.weixin.qq.com/doc/oplatform/Third-party_Platforms/api/component_access_token.html"/>
+            </summary>
+        </member>
+        <member name="P:EasyCooperation.WeChat.ThirdPartyPlatforms.ApiModels.Request.CommonGatewayInterface.Component.ApiComponentTokenRequest.ComponentAppId">
+            <summary>
+            第三方平台 appid
+            </summary>
+        </member>
+        <member name="P:EasyCooperation.WeChat.ThirdPartyPlatforms.ApiModels.Request.CommonGatewayInterface.Component.ApiComponentTokenRequest.ComponentAppSecret">
+            <summary>
+            第三方平台 appsecret
+            </summary>
+        </member>
+        <member name="P:EasyCooperation.WeChat.ThirdPartyPlatforms.ApiModels.Request.CommonGatewayInterface.Component.ApiComponentTokenRequest.ComponentVerifyTicket">
+            <summary>
+            微信后台推送的 ticket
+            </summary>
+        </member>
+        <member name="P:EasyCooperation.WeChat.ThirdPartyPlatforms.ApiModels.Request.CommonGatewayInterface.Component.ApiCreatePreAuthCodeRequest.ComponentAppId">
+            <summary>
+            第三方平台 appid
+            </summary>
+        </member>
+        <member name="P:EasyCooperation.WeChat.ThirdPartyPlatforms.ApiModels.Request.CommonGatewayInterface.Component.ApiQueryAuthRequest.ComponentAppId">
+            <summary>
+            第三方平台 appid
+            </summary>
+        </member>
+        <member name="P:EasyCooperation.WeChat.ThirdPartyPlatforms.ApiModels.Request.CommonGatewayInterface.Component.ApiQueryAuthRequest.AuthorizationCode">
+            <summary>
+            授权码, 会在授权成功时返回给第三方平台，详见第三方平台授权流程说明
+            <seealso href="https://developers.weixin.qq.com/doc/oplatform/Third-party_Platforms/Authorization_Process_Technical_Description.html"/>
+            </summary>
+        </member>
+        <member name="T:EasyCooperation.WeChat.ThirdPartyPlatforms.ApiModels.Response.CommonGatewayInterface.Component.ApiAuthorizerTokenResponse">
+            <summary>
+            第三方获取授权方令牌的返回模型
+            </summary>
+        </member>
+        <member name="P:EasyCooperation.WeChat.ThirdPartyPlatforms.ApiModels.Response.CommonGatewayInterface.Component.ApiAuthorizerTokenResponse.AuthorizerAccessToken">
+            <summary>
+            授权方令牌
+            </summary>
+        </member>
+        <member name="P:EasyCooperation.WeChat.ThirdPartyPlatforms.ApiModels.Response.CommonGatewayInterface.Component.ApiAuthorizerTokenResponse.ExpiresIn">
+            <summary>
+            AuthorizerAccessToken的有效期 单位：秒
+            </summary>
+        </member>
+        <member name="P:EasyCooperation.WeChat.ThirdPartyPlatforms.ApiModels.Response.CommonGatewayInterface.Component.ApiAuthorizerTokenResponse.AuthorizerRefreshToken">
+            <summary>
+            刷新令牌 刷新令牌主要用于第三方平台获取和刷新已授权用户的 AuthorizerAccessToken。一旦丢失，只能让用户重新授权，才能再次拿到新的刷新令牌。用户重新授权后，之前的刷新令牌会失效
+            </summary>
+        </member>
+        <member name="P:EasyCooperation.WeChat.ThirdPartyPlatforms.ApiModels.Response.CommonGatewayInterface.Component.ApiAuthorizerTokenResponse.ExpiresTime">
+            <summary>
+            过期时间
+            <para>
+            通过<see cref="P:EasyCooperation.WeChat.ThirdPartyPlatforms.ApiModels.Response.CommonGatewayInterface.Component.ApiAuthorizerTokenResponse.ExpiresIn"/>与本地时间计算得到,不完全准确,应考虑时间误差和网络耗时
+            </para>
+            </summary>
+        </member>
+        <member name="T:EasyCooperation.WeChat.ThirdPartyPlatforms.ApiModels.Response.CommonGatewayInterface.Component.ApiComponentTokenResponse">
+            <summary>
+            <seealso href="https://developers.weixin.qq.com/doc/oplatform/Third-party_Platforms/api/component_access_token.html"/>
+            </summary>
+        </member>
+        <member name="P:EasyCooperation.WeChat.ThirdPartyPlatforms.ApiModels.Response.CommonGatewayInterface.Component.ApiComponentTokenResponse.ComponentAccessToken">
+            <summary>
+            第三方平台 第三方平台 access_token
+            </summary>
+        </member>
+        <member name="P:EasyCooperation.WeChat.ThirdPartyPlatforms.ApiModels.Response.CommonGatewayInterface.Component.ApiComponentTokenResponse.ExpiresIn">
+            <summary>
+            有效期，单位：秒
+            </summary>
+        </member>
+        <member name="P:EasyCooperation.WeChat.ThirdPartyPlatforms.ApiModels.Response.CommonGatewayInterface.Component.ApiComponentTokenResponse.ExpiresTime">
+            <summary>
+            过期时间
+            <para>
+            通过<see cref="P:EasyCooperation.WeChat.ThirdPartyPlatforms.ApiModels.Response.CommonGatewayInterface.Component.ApiComponentTokenResponse.ExpiresIn"/>与本地时间计算得到,不完全准确,应考虑时间误差和网络耗时
+            </para>
+            </summary>
+        </member>
+        <member name="P:EasyCooperation.WeChat.ThirdPartyPlatforms.ApiModels.Response.CommonGatewayInterface.Component.ApiCreatePreAuthCodeResponse.PreAuthCode">
+            <summary>
+            预授权码
+            </summary>
+        </member>
+        <member name="P:EasyCooperation.WeChat.ThirdPartyPlatforms.ApiModels.Response.CommonGatewayInterface.Component.ApiCreatePreAuthCodeResponse.ExpiresIn">
+            <summary>
+            有效期，单位：秒
+            </summary>
+        </member>
+        <member name="P:EasyCooperation.WeChat.ThirdPartyPlatforms.ApiModels.Response.CommonGatewayInterface.Component.ApiCreatePreAuthCodeResponse.ExpiresTime">
+            <summary>
+            过期时间
+            <para>
+            通过<see cref="P:EasyCooperation.WeChat.ThirdPartyPlatforms.ApiModels.Response.CommonGatewayInterface.Component.ApiCreatePreAuthCodeResponse.ExpiresIn"/>与本地时间计算得到,不完全准确,应考虑时间误差和网络耗时
+            </para>
+            </summary>
+        </member>
+        <member name="P:EasyCooperation.WeChat.ThirdPartyPlatforms.ApiModels.Response.CommonGatewayInterface.Component.ApiQueryAuthResponse.AuthorizerAppId">
+            <summary>
+            授权方 appid
+            </summary>
+        </member>
+        <member name="P:EasyCooperation.WeChat.ThirdPartyPlatforms.ApiModels.Response.CommonGatewayInterface.Component.ApiQueryAuthResponse.FuncInfos">
+            <summary>
+            授权给开发者的权限集列表
+            </summary>
+        </member>
+        <member name="T:EasyCooperation.WeChat.ThirdPartyPlatforms.Enums.EnumBindComponentAuthAccountType">
+            <summary>
+            用户授权给第三方平台的帐号类型
+            </summary>
+        </member>
+        <member name="F:EasyCooperation.WeChat.ThirdPartyPlatforms.Enums.EnumBindComponentAuthAccountType.OfficialAccount">
+            <summary>
+            公众号
+            </summary>
+        </member>
+        <member name="F:EasyCooperation.WeChat.ThirdPartyPlatforms.Enums.EnumBindComponentAuthAccountType.Applet">
+            <summary>
+            小程序
+            </summary>
+        </member>
+        <member name="F:EasyCooperation.WeChat.ThirdPartyPlatforms.Enums.EnumBindComponentAuthAccountType.Both">
+            <summary>
+            公众号和小程序都展示
+            </summary>
+        </member>
+        <member name="T:EasyCooperation.WeChat.ThirdPartyPlatforms.Enums.EnumBindComponentAuthType">
+            <summary>
+            用户授权给第三方平台的方式
+            </summary>
+        </member>
+        <member name="T:EasyCooperation.WeChat.ThirdPartyPlatforms.Enums.EnumFuncScopeCategory">
+            <summary>
+            权限集枚举
+            </summary>
+            <summary>
+            全局返回码枚举
+            </summary>
+        </member>
+        <member name="F:EasyCooperation.WeChat.ThirdPartyPlatforms.Enums.EnumFuncScopeCategory._1_消息管理权限">
+            <summary>
+            帮助公众号接收用户消息，进行人工客服回复或自动回复
+            </summary>
+        </member>
+        <member name="F:EasyCooperation.WeChat.ThirdPartyPlatforms.Enums.EnumFuncScopeCategory._2_用户管理权限">
+            <summary>
+            帮助公众号获取用户信息，进行用户管理
+            </summary>
+        </member>
+        <member name="F:EasyCooperation.WeChat.ThirdPartyPlatforms.Enums.EnumFuncScopeCategory._3_帐号服务权限">
+            <summary>
+            帮助认证、设置公众号，进行帐号管理
+            </summary>
+        </member>
+        <member name="F:EasyCooperation.WeChat.ThirdPartyPlatforms.Enums.EnumFuncScopeCategory._4_网页服务权限">
+            <summary>
+            帮助公众号实现第三方网页服务和活动
+            </summary>
+        </member>
+        <member name="F:EasyCooperation.WeChat.ThirdPartyPlatforms.Enums.EnumFuncScopeCategory._5_微信小店权限">
+            <summary>
+            帮助公众号使用微信小店
+            </summary>
+        </member>
+        <member name="F:EasyCooperation.WeChat.ThirdPartyPlatforms.Enums.EnumFuncScopeCategory._6_微信多客服权限">
+            <summary>
+            帮助公众号使用微信多客服
+            </summary>
+        </member>
+        <member name="F:EasyCooperation.WeChat.ThirdPartyPlatforms.Enums.EnumFuncScopeCategory._7_群发与通知权限">
+            <summary>
+            帮助公众号进行群发和模板消息业务通知
+            </summary>
+        </member>
+        <member name="F:EasyCooperation.WeChat.ThirdPartyPlatforms.Enums.EnumFuncScopeCategory._8_微信卡券权限">
+            <summary>
+            帮助公众号使用微信卡券
+            </summary>
+        </member>
+        <member name="F:EasyCooperation.WeChat.ThirdPartyPlatforms.Enums.EnumFuncScopeCategory._9_微信扫一扫权限">
+            <summary>
+            帮助公众号使用微信扫一扫
+            </summary>
+        </member>
+        <member name="F:EasyCooperation.WeChat.ThirdPartyPlatforms.Enums.EnumFuncScopeCategory._10_微信连WIFI权限">
+            <summary>
+            帮助公众号使用微信连WIFI
+            </summary>
+        </member>
+        <member name="F:EasyCooperation.WeChat.ThirdPartyPlatforms.Enums.EnumFuncScopeCategory._11_素材管理权限">
+            <summary>
+            帮助公众号管理多媒体素材，用于客服等业务
+            </summary>
+        </member>
+        <member name="F:EasyCooperation.WeChat.ThirdPartyPlatforms.Enums.EnumFuncScopeCategory._12_微信摇周边权限">
+            <summary>
+            帮助公众号使用微信摇周边
+            </summary>
+        </member>
+        <member name="F:EasyCooperation.WeChat.ThirdPartyPlatforms.Enums.EnumFuncScopeCategory._13_微信门店权限">
+            <summary>
+            帮助公众号使用微信门店
+            </summary>
+        </member>
+        <member name="F:EasyCooperation.WeChat.ThirdPartyPlatforms.Enums.EnumFuncScopeCategory._15_自定义菜单权限">
+            <summary>
+            帮助公众号使用自定义菜单
+            </summary>
+        </member>
+        <member name="F:EasyCooperation.WeChat.ThirdPartyPlatforms.Enums.EnumFuncScopeCategory._22_城市服务接口权限">
+            <summary>
+            帮助城市服务内的服务向用户发送消息，沉淀办事记录，展示页卡及办事结果页
+            </summary>
+        </member>
+        <member name="F:EasyCooperation.WeChat.ThirdPartyPlatforms.Enums.EnumFuncScopeCategory._23_广告管理权限">
+            <summary>
+            帮助广告主进行微信广告的投放和管理
+            </summary>
+        </member>
+        <member name="F:EasyCooperation.WeChat.ThirdPartyPlatforms.Enums.EnumFuncScopeCategory._24_开放平台帐号管理权限">
+            <summary>
+            帮助公众号绑定开放平台帐号，实现用户身份打通
+            </summary>
+        </member>
+        <member name="F:EasyCooperation.WeChat.ThirdPartyPlatforms.Enums.EnumFuncScopeCategory._26_微信电子发票权限">
+            <summary>
+            帮助公众号使用微信电子发票
+            </summary>
+        </member>
+        <member name="F:EasyCooperation.WeChat.ThirdPartyPlatforms.Enums.EnumFuncScopeCategory._27_快速注册小程序权限">
+            <summary>
+            帮助公众号快速注册小程序
+            </summary>
+        </member>
+        <member name="F:EasyCooperation.WeChat.ThirdPartyPlatforms.Enums.EnumFuncScopeCategory._33_小程序管理权限">
+            <summary>
+            可新增关联小程序，并对公众号已关联的小程序进行管理
+            </summary>
+        </member>
+        <member name="F:EasyCooperation.WeChat.ThirdPartyPlatforms.Enums.EnumFuncScopeCategory._34_微信商品库权限">
+            <summary>
+            帮助公众号商家导入、更新、查询商品信息，从而在返佣商品推广等场景使用
+            </summary>
+        </member>
+        <member name="F:EasyCooperation.WeChat.ThirdPartyPlatforms.Enums.EnumFuncScopeCategory._35_微信卡路里权限">
+            <summary>
+            为公众号提供用户卡路里同步、授权查询、兑换功能
+            </summary>
+        </member>
+        <member name="F:EasyCooperation.WeChat.ThirdPartyPlatforms.Enums.EnumFuncScopeCategory._44_好物圈权限">
+            <summary>
+            帮助公众号将物品、订单、收藏等信息同步至好物圈，方便用户进行推荐
+            </summary>
+        </member>
+        <member name="F:EasyCooperation.WeChat.ThirdPartyPlatforms.Enums.EnumFuncScopeCategory._46_微信一物一码权限">
+            <summary>
+            帮助公众号使用微信一物一码功能
+            </summary>
+        </member>
+        <member name="F:EasyCooperation.WeChat.ThirdPartyPlatforms.Enums.EnumFuncScopeCategory._47_微信财政电子票据权限">
+            <summary>
+            帮助公众号完成授权、插卡及报销
+            </summary>
+        </member>
+        <member name="F:EasyCooperation.WeChat.ThirdPartyPlatforms.Enums.EnumFuncScopeCategory._54_服务号对话权限">
+            <summary>
+            帮助公众号配置对话能力，管理顾问、客户、标签和素材等
+            </summary>
+        </member>
+        <member name="F:EasyCooperation.WeChat.ThirdPartyPlatforms.Enums.EnumFuncScopeCategory._66_服务平台管理权限">
+            <summary>
+            帮助公众号管理服务平台上购买的资源
+            </summary>
+        </member>
+        <member name="F:EasyCooperation.WeChat.ThirdPartyPlatforms.Enums.EnumFuncScopeCategory._17_帐号管理权限">
+            <summary>
+            帮助小程序获取二维码，进行帐号管理
+            </summary>
+        </member>
+        <member name="F:EasyCooperation.WeChat.ThirdPartyPlatforms.Enums.EnumFuncScopeCategory._18_开发管理与数据分析权限">
+            <summary>
+            帮助小程序进行功能开发与数据分析
+            </summary>
+        </member>
+        <member name="F:EasyCooperation.WeChat.ThirdPartyPlatforms.Enums.EnumFuncScopeCategory._19_客服消息管理权限">
+            <summary>
+            帮助小程序接收和发送客服消息
+            </summary>
+        </member>
+        <member name="F:EasyCooperation.WeChat.ThirdPartyPlatforms.Enums.EnumFuncScopeCategory._25_开放平台帐号管理权限">
+            <summary>
+            帮助小程序绑定开放平台帐号，实现用户身份打通
+            </summary>
+        </member>
+        <member name="F:EasyCooperation.WeChat.ThirdPartyPlatforms.Enums.EnumFuncScopeCategory._30_小程序基本信息设置权限">
+            <summary>
+            帮助小程序设置名称、头像、简介、类目等基本信息
+            </summary>
+        </member>
+        <member name="F:EasyCooperation.WeChat.ThirdPartyPlatforms.Enums.EnumFuncScopeCategory._31_小程序认证权限">
+            <summary>
+            帮助小程序申请认证
+            </summary>
+        </member>
+        <member name="F:EasyCooperation.WeChat.ThirdPartyPlatforms.Enums.EnumFuncScopeCategory._36_微信卡路里权限">
+            <summary>
+            为小程序提供用户卡路里同步、授权查询、兑换功能
+            </summary>
+        </member>
+        <member name="F:EasyCooperation.WeChat.ThirdPartyPlatforms.Enums.EnumFuncScopeCategory._37_附近地点权限">
+            <summary>
+            帮助小程序创建附近地点，可设置小程序展示在“附近的小程序”入口中
+            </summary>
+        </member>
+        <member name="F:EasyCooperation.WeChat.ThirdPartyPlatforms.Enums.EnumFuncScopeCategory._40_插件管理权限">
+            <summary>
+            用于代小程序管理插件的添加和使用
+            </summary>
+        </member>
+        <member name="F:EasyCooperation.WeChat.ThirdPartyPlatforms.Enums.EnumFuncScopeCategory._41_好物圈权限">
+            <summary>
+            帮助小程序将物品、订单、收藏等信息同步至好物圈，方便用户进行推荐
+            </summary>
+        </member>
+        <member name="F:EasyCooperation.WeChat.ThirdPartyPlatforms.Enums.EnumFuncScopeCategory._45_快递配送权限">
+            <summary>
+            帮助有快递配送需求的开发者，快速高效对接多家快递公司。对接后用户可通过微信服务通知接收实时快递配送状态，提升用户体验
+            </summary>
+        </member>
+        <member name="F:EasyCooperation.WeChat.ThirdPartyPlatforms.Enums.EnumFuncScopeCategory._48_微信财政电子票据权限">
+            <summary>
+            帮助小程序完成授权、插卡及报销
+            </summary>
+        </member>
+        <member name="F:EasyCooperation.WeChat.ThirdPartyPlatforms.Enums.EnumFuncScopeCategory._49_云开发管理权限">
+            <summary>
+            帮助小程序管理小程序·云开发资源
+            </summary>
+        </member>
+        <member name="F:EasyCooperation.WeChat.ThirdPartyPlatforms.Enums.EnumFuncScopeCategory._51_即时配送权限">
+            <summary>
+            旨在解决餐饮、生鲜、超市等小程序的外卖配送需求，接入后小程序商家可通过统一的接口获得多家配送公司的配送服务，提高经营效率
+            </summary>
+        </member>
+        <member name="F:EasyCooperation.WeChat.ThirdPartyPlatforms.Enums.EnumFuncScopeCategory._52_小程序直播权限">
+            <summary>
+            帮助有直播需求的小程序实现在小程序上直播边看边买的能力
+            </summary>
+        </member>
+        <member name="F:EasyCooperation.WeChat.ThirdPartyPlatforms.Enums.EnumFuncScopeCategory._57_页面推送权限">
+            <summary>
+            帮助小程序推送小程序页面给搜索引擎，增加小程序页面在搜索的收录与曝光机会
+            </summary>
+        </member>
+        <member name="F:EasyCooperation.WeChat.ThirdPartyPlatforms.Enums.EnumFuncScopeCategory._65_广告管理权限">
+            <summary>
+            帮助广告主进行微信广告的投放和管理
+            </summary>
+        </member>
+        <member name="F:EasyCooperation.WeChat.ThirdPartyPlatforms.Enums.EnumFuncScopeCategory._67_服务平台管理权限">
+            <summary>
+            帮助小程序管理服务平台上购买的资源
+            </summary>
+        </member>
+        <member name="F:EasyCooperation.WeChat.ThirdPartyPlatforms.Enums.EnumFuncScopeCategory._70_商品管理权限">
+            <summary>
+            支持对小商店商品及库存信息进行管理
+            </summary>
+        </member>
+        <member name="F:EasyCooperation.WeChat.ThirdPartyPlatforms.Enums.EnumFuncScopeCategory._71_订单与物流管理权限">
+            <summary>
+            支持对小商店订单及物流信息进行管理
+            </summary>
+        </member>
+        <member name="T:EasyCooperation.WeChat.ThirdPartyPlatforms.HttpInterface.IComponent">
+            <summary>
+            Component
+            </summary>
+        </member>
+        <member name="M:EasyCooperation.WeChat.ThirdPartyPlatforms.HttpInterface.IComponent.ApiComponentToken(EasyCooperation.WeChat.ThirdPartyPlatforms.ApiModels.Request.CommonGatewayInterface.Component.ApiComponentTokenRequest,System.Nullable{System.TimeSpan},System.Threading.CancellationToken)">
+             <summary>
+             令牌
+             <seealso href="https://developers.weixin.qq.com/doc/oplatform/Third-party_Platforms/api/component_access_token.html"/>
+             <para>
+             令牌（component_access_token）是第三方平台接口的调用凭据。令牌的获取是有限制的，每个令牌的有效期为 2 小时，请自行做好令牌的管理，在令牌快过期时（比如1小时50分），重新调用接口获取。
+             </para>
+             <para>
+            如未特殊说明，令牌一般作为被调用接口的 GET 参数 component_access_token 的值使用
+             </para>
+             </summary>
+             <param name="apiComponentTokenRequest"></param>
+             <param name="timeout"></param>
+             <param name="cancellationToken"></param>
+             <returns></returns>
+        </member>
+        <member name="M:EasyCooperation.WeChat.ThirdPartyPlatforms.HttpInterface.IComponent.ApiCreatePreAuthCode(System.String,EasyCooperation.WeChat.ThirdPartyPlatforms.ApiModels.Request.CommonGatewayInterface.Component.ApiCreatePreAuthCodeRequest,System.Nullable{System.TimeSpan},System.Threading.CancellationToken)">
+             <summary>
+             预授权码
+             <seealso href="https://developers.weixin.qq.com/doc/oplatform/Third-party_Platforms/api/pre_auth_code.html"/>
+             <para>
+            预授权码（pre_auth_code）是第三方平台方实现授权托管的必备信息，每个预授权码有效期为 10 分钟。需要先获取令牌才能调用。使用过程中如遇到问题，可在开放平台服务商专区发帖交流。
+             </para>
+             </summary>
+             <param name="componentAccessToken"></param>
+             <param name="apiCreatePreAuthCodeRequest"></param>
+             <param name="timeout"></param>
+             <param name="cancellationToken"></param>
+             <returns></returns>
+        </member>
+        <member name="P:EasyCooperation.WeChat.ThirdPartyPlatforms.Notifies.Models.ComponentNotifyModelDecrypted.InfoType">
+            <summary>
+            通知类型
+            </summary>
+        </member>
+        <member name="P:EasyCooperation.WeChat.ThirdPartyPlatforms.Notifies.Models.ComponentNotifyModelDecrypted.AppId">
+            <summary>
+            第三方平台 appid
+            </summary>
+        </member>
+        <member name="T:EasyCooperation.WeChat.ThirdPartyPlatforms.Notifies.Models.ComponentVerifyTicketNotifyModel">
+            <summary>
+            验证票据推送通知模型
+            </summary>
+        </member>
+        <member name="P:EasyCooperation.WeChat.ThirdPartyPlatforms.Notifies.Models.ComponentVerifyTicketNotifyModel.CreateTime">
+            <summary>
+            时间戳，单位：s
+            </summary>
+        </member>
+        <member name="P:EasyCooperation.WeChat.ThirdPartyPlatforms.Notifies.Models.ComponentVerifyTicketNotifyModel.ComponentVerifyTicket">
+            <summary>
+            Ticket 内容
+            </summary>
+        </member>
+    </members>
+</doc>

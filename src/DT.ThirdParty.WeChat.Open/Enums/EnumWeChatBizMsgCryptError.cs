@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using System.Text;
 
-namespace EasyCooperation.WeChat.Open.Enums
+namespace EasyCooperation.WeChat.ThirdPartyPlatforms.Enums
 {
    public enum EnumWeChatBizMsgCryptResult
     {

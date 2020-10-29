@@ -5,7 +5,12 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\..\src\DT.ThirdParty.WeChat.Open\EasyCooperation.WeChat.Open.csproj" />
+    <PackageReference Include="Microsoft.VisualStudio.Web.CodeGeneration.Design" Version="3.1.4" />
+    <PackageReference Include="NSwag.AspNetCore" Version="13.8.2" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\..\src\DT.ThirdParty.WeChat.Open\EasyCooperation.WeChat.ThirdPartyPlatforms.csproj" />
   </ItemGroup>
 
 

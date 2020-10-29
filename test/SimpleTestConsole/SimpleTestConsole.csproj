@@ -6,7 +6,7 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\..\src\DT.ThirdParty.WeChat.Open\EasyCooperation.WeChat.Open.csproj" />
+    <ProjectReference Include="..\..\src\DT.ThirdParty.WeChat.Open\EasyCooperation.WeChat.ThirdPartyPlatforms.csproj" />
   </ItemGroup>
 
 </Project>

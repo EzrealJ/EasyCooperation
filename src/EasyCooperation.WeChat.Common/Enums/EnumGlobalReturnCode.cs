@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Text;
 
-namespace EasyCooperation.WeChat.Open.Enums
+namespace EasyCooperation.WeChat.Common.Enums
 {
     /// <summary>
     /// 全局返回码枚举

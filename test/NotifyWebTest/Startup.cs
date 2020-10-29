@@ -1,15 +1,17 @@
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
+using EasyCooperation.WeChat.ThirdPartyPlatforms.HttpInterface;
+using EasyCooperation.WeChat.ThirdPartyPlatforms.Notifies;
+using EasyCooperation.WeChat.ThirdPartyPlatforms.Notifies.Models;
+using EasyCooperation.WeChat.ThirdPartyPlatforms.Options;
+using EasyCooperation.WeChat.ThirdPartyPlatforms.Security;
+using EasyCooperation.WeChat.ThirdPartyPlatforms.Signature;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
-using Microsoft.AspNetCore.HttpsPolicy;
-using Microsoft.AspNetCore.Mvc;
+using Microsoft.Extensions.Caching.Memory;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
-using Microsoft.Extensions.Logging;
+using Newtonsoft.Json;
+using WebApiClient;
 
 namespace NotifyWebTest
 {
@@ -25,12 +27,23 @@ namespace NotifyWebTest
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
-            services.AddControllers();
+            services.AddHttpContextAccessor();
+            services.Configure<WeChatComponentOptions>(Configuration.GetSection(WeChatComponentOptions.WeChatComponent));
+            //services.AddTransient<HttpLogFilter>();
+            services.AddControllersWithViews(/*op=> op.Filters.Add<HttpLogFilter>()*/).AddXmlSerializerFormatters();         
+            services.AddScoped<ComponentAuthEventPublisher>();
+            services.AddSingleton<WeChatTokenSignerProvider>();
+            services.AddSingleton<ComponentAuthEventDecryptor>();
+            services.AddOpenApiDocument();
+            services.AddMemoryCache();
+            services.AddHttpApi<IComponent>();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
         public void Configure(IApplicationBuilder app, IWebHostEnvironment env)
         {
+            string componentVerifyTicketNotifyModel = System.IO.File.ReadAllText("./componentVerifyTicket.txt");
+            app.ApplicationServices.GetRequiredService<IMemoryCache>().Set(nameof(ComponentVerifyTicketNotifyModel),JsonConvert.DeserializeObject<ComponentVerifyTicketNotifyModel>(componentVerifyTicketNotifyModel));
             if (env.IsDevelopment())
             {
                 app.UseDeveloperExceptionPage();
@@ -44,8 +57,10 @@ namespace NotifyWebTest
 
             app.UseEndpoints(endpoints =>
             {
-                endpoints.MapControllers();
+                endpoints.MapDefaultControllerRoute();
             });
+            app.UseOpenApi();
+            app.UseSwaggerUi3();
         }
     }
 }

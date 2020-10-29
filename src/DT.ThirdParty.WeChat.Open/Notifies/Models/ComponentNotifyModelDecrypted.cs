@@ -1,10 +1,12 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Text;
+using System.Xml.Serialization;
 using EasyCooperation.Abstraction.Notifies.Models;
 
-namespace EasyCooperation.WeChat.Open.Notifies.Models
+namespace EasyCooperation.WeChat.ThirdPartyPlatforms.Notifies.Models
 {
+    [XmlRoot("xml")]
     public abstract class ComponentNotifyModelDecrypted : INotifyModelDecrypted
     {
         /// <summary>

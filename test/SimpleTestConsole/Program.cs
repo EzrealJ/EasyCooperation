@@ -1,5 +1,6 @@
 ﻿using System;
-using EasyCooperation.WeChat.Open.HttpInterface.CommonGatewayInterface;
+using EasyCooperation.WeChat.ThirdPartyPlatforms.ApiModels.Request.CommonGatewayInterface.Component;
+using EasyCooperation.WeChat.ThirdPartyPlatforms.HttpInterface;
 using WebApiClient;
 // ReSharper disable SuggestVarOrType_SimpleTypes
 
@@ -12,11 +13,8 @@ namespace SimpleTestConsole
         {
             HttpApi.Register<IComponent>();
             var component = HttpApi.Resolve<IComponent>();
-            var result = await component.ApiComponentToken(new EasyCooperation.WeChat.Open.ApiParameterModels.Request.CommonGatewayInterface.Component.ApiComponentTokenRequest()
+            var result = await component.ApiComponentToken(new ApiComponentTokenRequest()
             {
-                ComponentAppId = "wx4b0e613f3c243c4b",
-                ComponentAppSecret = "",
-                ComponentVerifyTicket = "",
             }) ;
             Console.WriteLine(result.ComponentAccessToken);
         }

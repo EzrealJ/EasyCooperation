@@ -2,11 +2,11 @@
 using System.Net.Http;
 using System.Net.Http.Headers;
 using System.Threading.Tasks;
-using EasyCooperation.WeChat.Open.ApiModels.Response;
+using EasyCooperation.WeChat.Common.ApiModels.Response;
 using WebApiClient.Attributes;
 using WebApiClient.Contexts;
 
-namespace EasyCooperation.WeChat.Open.Attributes
+namespace EasyCooperation.WeChat.Common.Attributes
 {
     public class WeChatJsonReturnAttribute : ApiReturnAttribute
     {
@@ -15,7 +15,6 @@ namespace EasyCooperation.WeChat.Open.Attributes
         {
             accept.Add(new MediaTypeWithQualityHeaderValue(JsonMediaType));
         }
-
         protected override async Task<object> GetTaskResult(ApiActionContext context)
         {
             HttpResponseMessage response = context.ResponseMessage;

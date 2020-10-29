@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Text;
 using EasyCooperation.Abstraction.Security;
 
-namespace EasyCooperation.WeChat.Open.Security
+namespace EasyCooperation.WeChat.ThirdPartyPlatforms.Security
 {
     public class WeChatComponentDecryptorOption : IDecryptorOption
     {

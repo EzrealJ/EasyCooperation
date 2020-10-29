@@ -4,7 +4,7 @@ using System.Text;
 using EasyCooperation.Abstraction.ApiModels.Response;
 using WebApiClient.DataAnnotations;
 
-namespace EasyCooperation.WeChat.Open.ApiModels.Response
+namespace EasyCooperation.WeChat.Common.ApiModels.Response
 {
     /// <summary>
     /// 微信Json返回结果

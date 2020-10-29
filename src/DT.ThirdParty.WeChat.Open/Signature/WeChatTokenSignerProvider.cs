@@ -5,7 +5,7 @@ using System.Text;
 using EasyCooperation.Abstraction.Exceptions;
 using EasyCooperation.Abstraction.Signature;
 
-namespace EasyCooperation.WeChat.Open.Signature
+namespace EasyCooperation.WeChat.ThirdPartyPlatforms.Signature
 {
     public class WeChatTokenSignerProvider : ISignerProvider
     {

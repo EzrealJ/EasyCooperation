@@ -1,7 +1,7 @@
 ﻿using EasyCooperation.Abstraction.ApiModels.Request;
 using WebApiClient.DataAnnotations;
 
-namespace EasyCooperation.WeChat.Open.ApiModels.Request.CommonGatewayInterface.Component
+namespace EasyCooperation.WeChat.ThirdPartyPlatforms.ApiModels.Request.CommonGatewayInterface.Component
 {
     /// <summary>
     /// <seealso href="https://developers.weixin.qq.com/doc/oplatform/Third-party_Platforms/api/component_access_token.html"/>

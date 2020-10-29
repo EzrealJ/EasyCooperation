@@ -8,7 +8,7 @@ namespace EasyCooperation.Abstraction.Extensions.Notifies.Models
 {
     public static class INotifyModelExtension
     {
-        public static INotifyModelDecrypted Decrypt(this INotifyModel notifyModel, IDecryptor<INotifyModel,  INotifyModelDecrypted> decryptor)
+        public static INotifyModelDecrypted Decrypt(this INotifyModel notifyModel, IDecryptor<INotifyModel, IDecryptorOption, INotifyModelDecrypted> decryptor)
         {
             return decryptor.Decrypt(notifyModel);
         }

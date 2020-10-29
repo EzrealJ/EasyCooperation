@@ -1,13 +1,15 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Text;
+using System.Xml.Serialization;
 using EasyCooperation.Abstraction.Notifies.Models;
 
-namespace EasyCooperation.WeChat.Open.Notifies.Models
+namespace EasyCooperation.WeChat.ThirdPartyPlatforms.Notifies.Models
 {
     /// <summary>
     /// 验证票据推送通知模型
     /// </summary>
+    [XmlRoot("xml")]
     public class ComponentVerifyTicketNotifyModel: ComponentNotifyModelDecrypted
     {
         /// <summary>

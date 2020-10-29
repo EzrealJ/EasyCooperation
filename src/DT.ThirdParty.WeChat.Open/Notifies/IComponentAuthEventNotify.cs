@@ -4,9 +4,9 @@ using System.Text;
 using EasyCooperation.Abstraction.Attributes;
 using EasyCooperation.Abstraction.Enums;
 using EasyCooperation.Abstraction.Notifies;
-using EasyCooperation.WeChat.Open.Notifies.Models;
+using EasyCooperation.WeChat.ThirdPartyPlatforms.Notifies.Models;
 
-namespace EasyCooperation.WeChat.Open.Notifies
+namespace EasyCooperation.WeChat.ThirdPartyPlatforms.Notifies
 {
     public interface IComponentAuthEventNotify : INotify
     {

@@ -257,5 +257,5 @@ paket-files/
 
 
 # 与.gitignore冲突的例外
-
-!DT.Business.Service.Company.User
+test/NotifyWebTest/appsettings.json
+test/NotifyWebTest/componentVerifyTicket.txt
