@@ -1,12 +1,13 @@
 using System;
 using System.Threading.Tasks;
 using EasyCooperation.WeChat.OfficialAccount.ApiModels.Request;
+using EasyCooperation.WeChat.OfficialAccount.ApiModels.Response;
 using EasyCooperation.WeChat.OfficialAccount.Enums;
 using EasyCooperation.WeChat.OfficialAccount.Helpers;
 using EasyCooperation.WeChat.OfficialAccount.HttpInterfaces;
-using EasyCooperation.WeChat.ThirdPartyPlatforms.ApiModels.Response.CommonGatewayInterface.Component;
-using EasyCooperation.WeChat.ThirdPartyPlatforms.HttpInterface;
-using EasyCooperation.WeChat.ThirdPartyPlatforms.Options;
+using EasyCooperation.WeChat.ThirdPartyPlatform.ApiModels.Response.CommonGatewayInterface.Component;
+using EasyCooperation.WeChat.ThirdPartyPlatform.HttpInterface;
+using EasyCooperation.WeChat.ThirdPartyPlatform.Options;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Caching.Memory;
 using Microsoft.Extensions.Logging;
@@ -72,7 +73,7 @@ namespace NotifyWebTest.Controllers
                     return RedirectToAction(nameof(AuthView), nameof(ComponentAuthController).Replace(nameof(Controller), string.Empty));
                 }
 
-                var accessTokenResponse = await _componentWebPageAuth.AccessToken(new AccessTokenRequest()
+                AccessTokenResponse accessTokenResponse = await _componentWebPageAuth.AccessToken(new AccessTokenRequest()
                 {
                     AppId = appid,
                     Code = code
@@ -83,7 +84,7 @@ namespace NotifyWebTest.Controllers
                     ComponentAccessToken = apiAuthorizerTokenResponse.AuthorizerAccessToken
                 });
 
-                var userInfoResponse = await _webPageAuth.UserInfo(new UserInfoRequest()
+                UserInfoResponse userInfoResponse = await _webPageAuth.UserInfo(new UserInfoRequest()
                 {
                     AccessToken = accessTokenResponse.AccessToken,
                     OpenId = accessTokenResponse.OpenId,

@@ -6,6 +6,17 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <Compile Remove="HttpInterfaces\CommonGatewayInterface\**" />
+    <EmbeddedResource Remove="HttpInterfaces\CommonGatewayInterface\**" />
+    <None Remove="HttpInterfaces\CommonGatewayInterface\**" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="ApiClients\" />
+    <Folder Include="Filters\" />
+  </ItemGroup>
+
+  <ItemGroup>
     <ProjectReference Include="..\EasyCooperation.WeChat.Common\EasyCooperation.WeChat.Common.csproj" />
   </ItemGroup>
 

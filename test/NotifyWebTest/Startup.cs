@@ -1,9 +1,10 @@
-using EasyCooperation.WeChat.ThirdPartyPlatforms.HttpInterface;
-using EasyCooperation.WeChat.ThirdPartyPlatforms.Notifies;
-using EasyCooperation.WeChat.ThirdPartyPlatforms.Notifies.Models;
-using EasyCooperation.WeChat.ThirdPartyPlatforms.Options;
-using EasyCooperation.WeChat.ThirdPartyPlatforms.Security;
-using EasyCooperation.WeChat.ThirdPartyPlatforms.Signature;
+using EasyCooperation.WeChat.OfficialAccount.HttpInterfaces;
+using EasyCooperation.WeChat.ThirdPartyPlatform.HttpInterface;
+using EasyCooperation.WeChat.ThirdPartyPlatform.Notifies;
+using EasyCooperation.WeChat.ThirdPartyPlatform.Notifies.Models;
+using EasyCooperation.WeChat.ThirdPartyPlatform.Options;
+using EasyCooperation.WeChat.ThirdPartyPlatform.Security;
+using EasyCooperation.WeChat.ThirdPartyPlatform.Signature;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.Extensions.Caching.Memory;
@@ -37,6 +38,8 @@ namespace NotifyWebTest
             services.AddOpenApiDocument();
             services.AddMemoryCache();
             services.AddHttpApi<IComponent>();
+            services.AddHttpApi<IWebPageAuth>();
+            services.AddHttpApi<IComponentWebPageAuth>();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.

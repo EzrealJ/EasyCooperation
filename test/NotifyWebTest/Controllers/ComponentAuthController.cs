@@ -1,10 +1,10 @@
 ﻿using System.Threading.Tasks;
-using EasyCooperation.WeChat.ThirdPartyPlatforms.ApiModels.Request.CommonGatewayInterface.Component;
-using EasyCooperation.WeChat.ThirdPartyPlatforms.ApiModels.Response.CommonGatewayInterface.Component;
-using EasyCooperation.WeChat.ThirdPartyPlatforms.Enums;
-using EasyCooperation.WeChat.ThirdPartyPlatforms.HttpInterface;
-using EasyCooperation.WeChat.ThirdPartyPlatforms.Notifies.Models;
-using EasyCooperation.WeChat.ThirdPartyPlatforms.Options;
+using EasyCooperation.WeChat.ThirdPartyPlatform.ApiModels.Request.CommonGatewayInterface.Component;
+using EasyCooperation.WeChat.ThirdPartyPlatform.ApiModels.Response.CommonGatewayInterface.Component;
+using EasyCooperation.WeChat.ThirdPartyPlatform.Enums;
+using EasyCooperation.WeChat.ThirdPartyPlatform.HttpInterface;
+using EasyCooperation.WeChat.ThirdPartyPlatform.Notifies.Models;
+using EasyCooperation.WeChat.ThirdPartyPlatform.Options;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Caching.Memory;
 using Microsoft.Extensions.Logging;

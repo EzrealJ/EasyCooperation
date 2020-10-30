@@ -1,8 +1,10 @@
-﻿using EasyCooperation.WeChat.ThirdPartyPlatforms.Notifies;
-using EasyCooperation.WeChat.ThirdPartyPlatforms.Notifies.Models;
+﻿using EasyCooperation.WeChat.ThirdPartyPlatform.Notifies;
+using EasyCooperation.WeChat.ThirdPartyPlatform.Notifies.Models;
+using EasyCooperation.WeChat.ThirdPartyPlatform.Options;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Caching.Memory;
 using Microsoft.Extensions.Logging;
+using Microsoft.Extensions.Options;
 using Newtonsoft.Json;
 
 namespace NotifyWebTest.Controllers
@@ -13,9 +15,10 @@ namespace NotifyWebTest.Controllers
         private readonly ILogger<AuthEventNotifyController> _logger;
         private readonly IMemoryCache _memoryCache;
 
-        public AuthEventNotifyController(ComponentAuthEventPublisher componentAuthEventPublisher, ILogger<AuthEventNotifyController> logger, IMemoryCache memoryCache)
+        public AuthEventNotifyController(ComponentAuthEventPublisher componentAuthEventPublisher, IOptionsSnapshot<WeChatComponentOptions> optionsSnapshotOfWeChatComponentOptions, ILogger<AuthEventNotifyController> logger, IMemoryCache memoryCache)
         {
             _componentAuthEventPublisher = componentAuthEventPublisher;
+            _componentAuthEventPublisher.WeChatComponentOptions = optionsSnapshotOfWeChatComponentOptions.Value;
             _logger = logger;
             _memoryCache = memoryCache;
             _componentAuthEventPublisher.ComponentVerifyTicketNotifyHandler = HandleComponentVerifyTicketNotify;

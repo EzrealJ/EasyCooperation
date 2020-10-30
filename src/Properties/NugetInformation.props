@@ -1,0 +1,19 @@
+﻿  <Project>
+    <PropertyGroup>
+        <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
+        <Authors>Ezreal</Authors>
+        <Version>0.1.1-preview</Version>
+        <Description>基于WebClient.JIT的第三方业务接入库</Description>
+        <Copyright>Ezreal</Copyright>
+        <PackageTags>EasyCooperation</PackageTags>
+      <PackageRequireLicenseAcceptance>true</PackageRequireLicenseAcceptance>
+      <PackageLicenseFile>LICENSE</PackageLicenseFile>
+      <RepositoryUrl>https://github.com/EzrealJ/EasyCooperation</RepositoryUrl>
+    </PropertyGroup>
+    <ItemGroup>
+      <None Include="..\..\LICENSE">
+        <Pack>True</Pack>
+        <PackagePath></PackagePath>
+      </None>
+    </ItemGroup>
+  </Project>

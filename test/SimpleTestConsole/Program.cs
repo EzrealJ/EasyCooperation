@@ -1,6 +1,6 @@
 ﻿using System;
-using EasyCooperation.WeChat.ThirdPartyPlatforms.ApiModels.Request.CommonGatewayInterface.Component;
-using EasyCooperation.WeChat.ThirdPartyPlatforms.HttpInterface;
+using EasyCooperation.WeChat.ThirdPartyPlatform.ApiModels.Request.CommonGatewayInterface.Component;
+using EasyCooperation.WeChat.ThirdPartyPlatform.HttpInterface;
 using WebApiClient;
 // ReSharper disable SuggestVarOrType_SimpleTypes
 
